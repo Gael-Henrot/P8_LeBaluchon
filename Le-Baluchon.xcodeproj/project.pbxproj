@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		7CF6DD1426A570440079C41A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF6DD1326A570440079C41A /* AppDelegate.swift */; };
 		7CF6DD1626A570440079C41A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF6DD1526A570440079C41A /* SceneDelegate.swift */; };
-		7CF6DD1826A570440079C41A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF6DD1726A570440079C41A /* ViewController.swift */; };
 		7CF6DD1B26A570440079C41A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF6DD1926A570440079C41A /* Main.storyboard */; };
 		7CF6DD1D26A570460079C41A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CF6DD1C26A570460079C41A /* Assets.xcassets */; };
 		7CF6DD2026A570460079C41A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF6DD1E26A570460079C41A /* LaunchScreen.storyboard */; };
+		7CF6DD2B26A574C90079C41A /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF6DD2A26A574C90079C41A /* CurrencyViewController.swift */; };
+		7CF6DD2D26A57DAC0079C41A /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF6DD2C26A57DAC0079C41A /* Currency.swift */; };
+		7CF6DD2F26A589B50079C41A /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF6DD2E26A589B50079C41A /* CurrencyService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7CF6DD1026A570440079C41A /* Le-Baluchon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Le-Baluchon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF6DD1326A570440079C41A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CF6DD1526A570440079C41A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7CF6DD1726A570440079C41A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7CF6DD1A26A570440079C41A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7CF6DD1C26A570460079C41A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CF6DD1F26A570460079C41A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7CF6DD2126A570460079C41A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CF6DD2A26A574C90079C41A /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
+		7CF6DD2C26A57DAC0079C41A /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		7CF6DD2E26A589B50079C41A /* CurrencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		7CF6DD1226A570440079C41A /* Le-Baluchon */ = {
 			isa = PBXGroup;
 			children = (
+				7CF6DD2726A570570079C41A /* Model */,
+				7CF6DD2826A5705D0079C41A /* View */,
+				7CF6DD2926A570650079C41A /* Controller */,
 				7CF6DD1326A570440079C41A /* AppDelegate.swift */,
 				7CF6DD1526A570440079C41A /* SceneDelegate.swift */,
-				7CF6DD1726A570440079C41A /* ViewController.swift */,
-				7CF6DD1926A570440079C41A /* Main.storyboard */,
-				7CF6DD1C26A570460079C41A /* Assets.xcassets */,
-				7CF6DD1E26A570460079C41A /* LaunchScreen.storyboard */,
 				7CF6DD2126A570460079C41A /* Info.plist */,
 			);
 			path = "Le-Baluchon";
+			sourceTree = "<group>";
+		};
+		7CF6DD2726A570570079C41A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7CF6DD2C26A57DAC0079C41A /* Currency.swift */,
+				7CF6DD2E26A589B50079C41A /* CurrencyService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7CF6DD2826A5705D0079C41A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7CF6DD1C26A570460079C41A /* Assets.xcassets */,
+				7CF6DD1E26A570460079C41A /* LaunchScreen.storyboard */,
+				7CF6DD1926A570440079C41A /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7CF6DD2926A570650079C41A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7CF6DD2A26A574C90079C41A /* CurrencyViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +167,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CF6DD1826A570440079C41A /* ViewController.swift in Sources */,
+				7CF6DD2F26A589B50079C41A /* CurrencyService.swift in Sources */,
+				7CF6DD2D26A57DAC0079C41A /* Currency.swift in Sources */,
 				7CF6DD1426A570440079C41A /* AppDelegate.swift in Sources */,
+				7CF6DD2B26A574C90079C41A /* CurrencyViewController.swift in Sources */,
 				7CF6DD1626A570440079C41A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +327,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ExpleoFrance.Henrot.Gael.Le-Baluchon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -313,7 +345,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ExpleoFrance.Henrot.Gael.Le-Baluchon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
