@@ -39,10 +39,22 @@ class WeatherViewController: UIViewController {
                 return
             }
             if let weatherData = weatherData {
+                self.departureCityTemperatureLabel.text = String(weatherData.temperature)
+                self.departureCityWeatherDescription.text = weatherData.description
+                self.departureCityWeatherPicture.image = UIImage(data: weatherData.picture)
+            } else {
+                self.presentAlert()
+            }
+        }
+        weatherService.getDestinationWeather { success, weatherData in
+            guard success else {
+                self.presentAlert()
+                return
+            }
+            if let weatherData = weatherData {
                 self.destinationCityTemperatureLabel.text = String(weatherData.temperature)
                 self.destinationCityWeatherDescription.text = weatherData.description
-                let imageName = String(weatherData.iconId)
-                self.destinationCityWeatherPicture.image = UIImage(named: imageName)
+                self.destinationCityWeatherPicture.image = UIImage(data: weatherData.picture)
             } else {
                 self.presentAlert()
             }

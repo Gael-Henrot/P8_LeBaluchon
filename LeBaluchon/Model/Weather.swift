@@ -41,7 +41,7 @@ struct Main: Decodable {
 struct WeatherData {
     var description: String
     var temperature : Double
-    var iconId: String
+    var picture: Data
 }
 
 
