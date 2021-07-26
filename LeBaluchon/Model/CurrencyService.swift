@@ -11,7 +11,7 @@ class CurrencyService {
     
     private static let currencyUrl = "http://data.fixer.io/api/"
     
-    private static let accessKey = APIKeys().dataFixerIOAPIKey
+    private static let accessKey = APIKeys.dataFixerIOAPIKey
     let baseCurrency = "EUR"
     let targetCurrency = "USD"
     
@@ -20,7 +20,7 @@ class CurrencyService {
     init(session: URLSession = URLSession(configuration: .default)) {
         self.session = session
     }
-    
+    /// This method provides the rate between the base currency and the target currency from the data.fixer.io API.
     func getCurrencyRate(callback: @escaping (Bool, CurrencyData?) -> Void) {
         
         let url = URL(string: "\(CurrencyService.currencyUrl)latest?access_key=\(CurrencyService.accessKey)&base=\(self.baseCurrency)&symbols=\(self.targetCurrency)")

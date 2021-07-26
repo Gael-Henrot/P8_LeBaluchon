@@ -26,41 +26,44 @@ class WeatherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        destinationCityNameLabel.text = "NEW YORK City"
-        departureCityNameLabel.text = "SUZE LA ROUSSE"
         refreshWeather()
-       
     }
     
+    /// This method refresh all the weather data (description, picture, etc.) to display.
     private func refreshWeather() {
-        weatherService.getDepartureWeather { success, weatherData in
+        
+        weatherService.getDepartureWeather(callback: { (success, weatherData) in
             guard success else {
                 self.presentAlert()
                 return
             }
             if let weatherData = weatherData {
+                self.departureCityNameLabel.text = weatherData.name
                 self.departureCityTemperatureLabel.text = String(weatherData.temperature)
                 self.departureCityWeatherDescription.text = weatherData.description
                 self.departureCityWeatherPicture.image = UIImage(data: weatherData.picture)
             } else {
                 self.presentAlert()
             }
-        }
-        weatherService.getDestinationWeather { success, weatherData in
+        })
+        
+        weatherService.getDestinationWeather(callback: { (success, weatherData) in
             guard success else {
                 self.presentAlert()
                 return
             }
             if let weatherData = weatherData {
+                self.destinationCityNameLabel.text = weatherData.name
                 self.destinationCityTemperatureLabel.text = String(weatherData.temperature)
                 self.destinationCityWeatherDescription.text = weatherData.description
                 self.destinationCityWeatherPicture.image = UIImage(data: weatherData.picture)
             } else {
                 self.presentAlert()
             }
-        }
+        })
     }
     
+    /// This method presents a standard Alert Controller to warn the user when a problem occurrs during the weather update.
     private func presentAlert() {
         let alertVC = UIAlertController(title: "Error", message: "The weather download failed.", preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))

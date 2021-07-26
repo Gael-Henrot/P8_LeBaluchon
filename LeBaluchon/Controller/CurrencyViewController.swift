@@ -21,7 +21,7 @@ class CurrencyViewController: UIViewController {
     }
     
     let currencyService = CurrencyService()
-    
+    /// In the viewDidLoad(), the converting rate is updated and displays.
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +41,7 @@ class CurrencyViewController: UIViewController {
         }
     }
    
+    /// This method retrieves the amount to convert and applies the rate to its.
     private func convert() {
         guard let baseCurrency = baseCurrencyTextField.text else {
             return
@@ -51,12 +52,14 @@ class CurrencyViewController: UIViewController {
         targetCurrencyTextField.text = "\(baseCurrencyAmount * rate)"
     }
     
+    /// This method presents a standard Alert Controller to warn the user when a problem occurrs during the rate update.
     private func presentAlert() {
         let alertVC = UIAlertController(title: "Error", message: "The currency rate download failed.", preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         present(alertVC, animated: true, completion: nil)
     }
     
+    /// This method hides the keyboard if the user touch outside the keyboard.
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         baseCurrencyTextField.resignFirstResponder()
     }
