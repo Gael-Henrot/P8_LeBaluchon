@@ -100,7 +100,7 @@ class WeatherServiceTestCases: XCTestCase {
         }
         wait(for: [expectation], timeout: 0.01)
     }
-    /*func testGetDepartureWeatherShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
+    func testGetDepartureWeatherShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
         let weatherService = WeatherService(departureSession: URLSessionFake(data: FakeWeatherData.weatherCorrectData, response: FakeWeatherData.responseOK, error: nil),
                                             departurePictureSession: URLSessionFake(data: FakeWeatherData.pictureData, response: FakeWeatherData.responseOK, error: nil),
                                             destinationSession: URLSessionFake(data: nil, response: nil, error: nil),
@@ -118,7 +118,7 @@ class WeatherServiceTestCases: XCTestCase {
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 0.01)
-    }*/
+    }
     func testGetDestinationWeatherShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
         let weatherService = WeatherService(departureSession: URLSessionFake(data: nil, response: nil, error: nil),
                                             departurePictureSession: URLSessionFake(data: nil, response: nil, error: nil),

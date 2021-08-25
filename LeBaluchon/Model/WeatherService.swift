@@ -8,6 +8,8 @@
 import Foundation
 
 class WeatherService {
+    
+    //MARK: - Properties
     private static let appIdKey = APIKeys.openweathermapAPIKey
     private static let units = "metric"
     private static let lang = "fr"
@@ -34,24 +36,24 @@ class WeatherService {
     
     /// This method gives the name, the temperature, the description and the picture of the weather of the departure city using the getWeather method.
     func getDepartureWeather(callback: @escaping (Bool, WeatherData?) -> Void) {
-        getWeather(session: departureSession, url: departureUrl) { (success, data) in
+        getWeather(weatherSession: departureSession, url: departureUrl, pictureSession: departurePictureSession) { (success, data) in
             callback(success, data)
         }
     }
     
     /// This method gives the name, the temperature, the description and the picture of the weather of the destination city using the getWeather method.
     func getDestinationWeather(callback: @escaping (Bool, WeatherData?) -> Void) {
-        getWeather(session: destinationSession, url: destinationUrl) { (success, data) in
+        getWeather(weatherSession: destinationSession, url: destinationUrl, pictureSession: destinationPictureSession) { (success, data) in
             callback(success, data)
         }
     }
     
     /// This method provides the name, the temperature, the description and the picture of the weather of a city using the Openweathermap API (the url parameter determines the city).
-    private func getWeather(session: URLSession, url: URL, callback: @escaping (Bool, WeatherData?) -> Void) {
+    private func getWeather(weatherSession: URLSession, url: URL, pictureSession: URLSession, callback: @escaping (Bool, WeatherData?) -> Void) {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
-        let task = session.dataTask(with: request) { (data, response, error) in
+        let task = weatherSession.dataTask(with: request) { (data, response, error) in
             DispatchQueue.main.async {
                 guard let data = data, error == nil else {
                     callback(false, nil)
@@ -77,7 +79,7 @@ class WeatherService {
                     return
                 }
                 let temperature = round(responseJSON.main.temp * 10) / 10
-                self.getPicture(iconId: icon) { data in
+                self.getPicture(session: pictureSession, iconId: icon) { data in
                     guard let data = data else {
                         callback(false, nil)
                         return
@@ -91,9 +93,9 @@ class WeatherService {
     }
     
     ///This method gives the picture of the weather according to the iconId parameter provides by the Openweathermap API.
-    private func getPicture(iconId: String, completionHandler: @escaping (Data?) -> Void) {
+    private func getPicture(session: URLSession, iconId: String, completionHandler: @escaping (Data?) -> Void) {
         let pictureURLString = "http://openweathermap.org/img/wn/\(iconId)@2x.png"
-        let task = destinationPictureSession.dataTask(with: URL(string: pictureURLString)!) { (data, response, error) in
+        let task = session.dataTask(with: URL(string: pictureURLString)!) { (data, response, error) in
             DispatchQueue.main.async {
                 guard let data = data, error == nil else {
                     completionHandler(nil)

@@ -20,7 +20,10 @@ struct CurrencyData {
     var rate : Double
 }
 
-/*{
+/*
+ Response Data Model:
+ 
+ {
     "success": true,
     "timestamp": 1626969004,
     "base": "EUR",

@@ -48,6 +48,7 @@ struct WeatherData {
 
 
 /*
+ Response Data Model:
  
  {
      "coord": {

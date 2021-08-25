@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Le-Baluchon
+//  LeBaluchon
 //
 //  Created by Gaël HENROT on 19/07/2021.
 //

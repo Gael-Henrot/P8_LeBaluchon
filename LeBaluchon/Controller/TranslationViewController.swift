@@ -8,22 +8,42 @@
 import UIKit
 
 class TranslationViewController: UIViewController {
+    //MARK: - Properties:
 
+    @IBOutlet weak var sourceLanguageTextView: UITextView!
+    @IBOutlet weak var targetLanguageTextView: UITextView!
+    @IBOutlet weak var sourceLanguageLabel: UILabel!
+    @IBOutlet weak var targetLanguageLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        sourceLanguageLabel.text = "Français"
+        targetLanguageLabel.text = "Anglais"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    var textToTranslate: String?
+    var targetLanguageCode: String?
+    
+    let translationService = TranslationService(translationSession: URLSession(configuration: .default))
+    //MARK: - Methods
+    @IBAction func tappedTranslationButton() {
+        getTranslation()
     }
-    */
-
+    
+    private func getTranslation() {
+        translationService.getTranslation(textToTranslate: sourceLanguageTextView.text, callback: { (success, translationData) in
+            guard success else {
+                self.presentAlert()
+                return
+            }
+            self.targetLanguageTextView.text = translationData?.translatedText
+        })
+    }
+    
+    /// This method presents a standard Alert Controller to warn the user when a problem occurrs during the translation update.
+    private func presentAlert() {
+        let alertVC = UIAlertController(title: "Error", message: "The translation download failed.", preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alertVC, animated: true, completion: nil)
+    }
 }
