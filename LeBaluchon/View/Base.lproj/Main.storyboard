@@ -276,7 +276,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Traduced text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Qx-4O-NGj" userLabel="Target Language Text View">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Text to traduce" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Qx-4O-NGj" userLabel="Target Language Text View">
                                 <rect key="frame" x="20" y="529" width="374" height="264"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -291,25 +291,36 @@
                                     <action selector="tappedTranslationButton" destination="GJf-Xg-OTE" eventType="touchUpInside" id="QUG-Yt-QaV"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="Text to traduce" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WVo-Dv-5LT" userLabel="Source Language Text View">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="Texte à traduire" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WVo-Dv-5LT" userLabel="Source Language Text View">
                                 <rect key="frame" x="20" y="114" width="374" height="273"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PY3-J2-NHe">
+                                <rect key="frame" x="308" y="407" width="86" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Inverser"/>
+                                <connections>
+                                    <action selector="tappedInversionButton" destination="GJf-Xg-OTE" eventType="touchUpInside" id="4Fl-UF-Aak"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2Sh-fP-Jmc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2Sh-fP-Jmc" firstAttribute="trailing" secondItem="7Qx-4O-NGj" secondAttribute="trailing" constant="20" id="2GL-bu-TXc"/>
+                            <constraint firstItem="2Sh-fP-Jmc" firstAttribute="trailing" secondItem="PY3-J2-NHe" secondAttribute="trailing" constant="20" id="3qJ-ca-tZO"/>
                             <constraint firstItem="MXx-Ag-rXz" firstAttribute="centerX" secondItem="CHE-vQ-D81" secondAttribute="centerX" id="7Cu-K6-XO9"/>
                             <constraint firstItem="2Sh-fP-Jmc" firstAttribute="trailing" secondItem="WVo-Dv-5LT" secondAttribute="trailing" constant="20" id="89m-dS-Po5"/>
                             <constraint firstItem="7Qx-4O-NGj" firstAttribute="top" secondItem="LT8-5M-nuq" secondAttribute="bottom" constant="20" id="B1B-Gm-321"/>
                             <constraint firstItem="2Sh-fP-Jmc" firstAttribute="bottom" secondItem="7Qx-4O-NGj" secondAttribute="bottom" constant="20" id="Huy-vT-SE0"/>
                             <constraint firstItem="LT8-5M-nuq" firstAttribute="top" secondItem="MXx-Ag-rXz" secondAttribute="bottom" constant="30" id="ZeT-4W-ZYU"/>
                             <constraint firstItem="WVo-Dv-5LT" firstAttribute="leading" secondItem="2Sh-fP-Jmc" secondAttribute="leading" constant="20" id="bm5-Lh-Tyh"/>
+                            <constraint firstItem="MXx-Ag-rXz" firstAttribute="top" secondItem="PY3-J2-NHe" secondAttribute="top" id="eV6-2d-DnV"/>
                             <constraint firstItem="V7f-6j-eOq" firstAttribute="top" secondItem="2Sh-fP-Jmc" secondAttribute="top" constant="20" id="fUr-EE-dVG"/>
+                            <constraint firstItem="MXx-Ag-rXz" firstAttribute="bottom" secondItem="PY3-J2-NHe" secondAttribute="bottom" id="fks-7i-eqx"/>
                             <constraint firstItem="MXx-Ag-rXz" firstAttribute="top" secondItem="WVo-Dv-5LT" secondAttribute="bottom" constant="20" id="fxP-Rr-7Zg"/>
                             <constraint firstItem="WVo-Dv-5LT" firstAttribute="top" secondItem="V7f-6j-eOq" secondAttribute="bottom" constant="20" id="gvo-24-POl"/>
                             <constraint firstItem="MXx-Ag-rXz" firstAttribute="centerY" secondItem="CHE-vQ-D81" secondAttribute="centerY" constant="-20" id="hbW-hY-Z10"/>
@@ -318,7 +329,7 @@
                             <constraint firstItem="LT8-5M-nuq" firstAttribute="centerX" secondItem="CHE-vQ-D81" secondAttribute="centerX" id="vhd-1O-s3b"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Translation" id="ASp-2m-g0f"/>
+                    <tabBarItem key="tabBarItem" title="Translation" image="doc.text.fill" catalog="system" id="ASp-2m-g0f"/>
                     <connections>
                         <outlet property="sourceLanguageLabel" destination="V7f-6j-eOq" id="rz1-lR-LIQ"/>
                         <outlet property="sourceLanguageTextView" destination="WVo-Dv-5LT" id="rgX-Bf-tps"/>
@@ -333,6 +344,7 @@
     </scenes>
     <resources>
         <image name="cloud.sun.rain.fill" catalog="system" width="128" height="125"/>
+        <image name="doc.text.fill" catalog="system" width="115" height="128"/>
         <image name="dollarsign.square.fill" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

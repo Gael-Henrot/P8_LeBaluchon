@@ -30,6 +30,7 @@ class TranslationViewController: UIViewController {
         getTranslation()
     }
     
+    /// This method call the model getTranslation method and display the result.
     private func getTranslation() {
         translationService.getTranslation(textToTranslate: sourceLanguageTextView.text, callback: { (success, translationData) in
             guard success else {
@@ -38,6 +39,18 @@ class TranslationViewController: UIViewController {
             }
             self.targetLanguageTextView.text = translationData?.translatedText
         })
+    }
+    
+    /// This method reverses the source langage and the target language (all labels, text views and getTranlation method).
+    @IBAction func tappedInversionButton() {
+        swap(&translationService.sourceLanguageCode, &translationService.targetLanguageCode)
+        swap(&(sourceLanguageLabel.text)!, &(targetLanguageLabel.text)!)
+        swap(&sourceLanguageTextView.text,&targetLanguageTextView.text)
+    }
+    
+    /// This method swap the value (String) of two variables.
+    private func swap( _ a: inout String, _ b: inout String) {
+        (a, b) = (b, a)
     }
     
     /// This method presents a standard Alert Controller to warn the user when a problem occurrs during the translation update.
