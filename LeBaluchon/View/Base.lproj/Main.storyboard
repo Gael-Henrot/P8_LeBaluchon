@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ju6-M9-72s">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="umbrage2.ttf">
+            <string>Umbrage</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Base Tab Bar Controller-->
         <scene sceneID="75b-rs-Nqb">
@@ -15,7 +20,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="boP-P2-dMd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="OcY-Q5-Uac" kind="relationship" relationship="viewControllers" id="hM4-Kf-mN2"/>
@@ -32,79 +37,112 @@
             <objects>
                 <viewController id="OcY-Q5-Uac" userLabel="Currency View Controller" customClass="CurrencyViewController" customModule="LeBaluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JRK-Fn-NXc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's convert that money !" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBq-0v-GpJ">
-                                <rect key="frame" x="68" y="64" width="278" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="euro-dollar-cut" translatesAutoresizingMaskIntoConstraints="NO" id="zcV-xy-5LM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.00" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WxW-kY-PK2" userLabel="Base Currency Text Field">
-                                <rect key="frame" x="50" y="194" width="218.5" height="46"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="50" y="325" width="189" height="43.5"/>
+                                <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Euro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBa-qD-HbQ">
-                                <rect key="frame" x="288.5" y="199" width="75.5" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="259" y="330" width="66" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.00" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VIE-St-AkO" userLabel="Target Currency Text Field">
-                                <rect key="frame" x="50" y="340" width="218.5" height="46"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="50" y="468.5" width="189" height="43.5"/>
+                                <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dollar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztl-Vj-8EY">
-                                <rect key="frame" x="288.5" y="345" width="75.5" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="259" y="473.5" width="96" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29r-ku-WRb">
-                                <rect key="frame" x="50" y="280" width="45" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taux de change:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29r-ku-WRb">
+                                <rect key="frame" x="50" y="408.5" width="150" height="22.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1e-8S-NCj">
-                                <rect key="frame" x="243.5" y="280" width="25" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="259" y="406" width="26.5" height="28"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Convertissons tout cet argent!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBq-0v-GpJ">
+                                <rect key="frame" x="20" y="157.5" width="335" height="67.5"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gp4-jK-ipn">
-                                <rect key="frame" x="164" y="427" width="86" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Convert"/>
+                                <rect key="frame" x="102" y="542" width="171" height="46"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="30"/>
+                                <state key="normal" title="Conversion!"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="tappedConvertButton" destination="OcY-Q5-Uac" eventType="touchUpInside" id="49p-3a-e5B"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vy0-Lh-OgO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="WxW-kY-PK2" firstAttribute="top" secondItem="FBq-0v-GpJ" secondAttribute="bottom" constant="100" id="0ru-L0-gS0"/>
+                            <constraint firstItem="f1e-8S-NCj" firstAttribute="leading" secondItem="wBa-qD-HbQ" secondAttribute="leading" id="1Kh-LW-UiB"/>
+                            <constraint firstItem="FBq-0v-GpJ" firstAttribute="leading" secondItem="Vy0-Lh-OgO" secondAttribute="leading" constant="20" id="1NK-57-PeX"/>
                             <constraint firstItem="wBa-qD-HbQ" firstAttribute="leading" secondItem="WxW-kY-PK2" secondAttribute="trailing" constant="20" id="1ll-48-56O"/>
+                            <constraint firstAttribute="bottom" secondItem="zcV-xy-5LM" secondAttribute="bottom" id="4id-0G-wP7"/>
                             <constraint firstItem="Vy0-Lh-OgO" firstAttribute="trailing" secondItem="wBa-qD-HbQ" secondAttribute="trailing" constant="50" id="7Ef-m1-Jvs"/>
                             <constraint firstItem="29r-ku-WRb" firstAttribute="leading" secondItem="WxW-kY-PK2" secondAttribute="leading" id="7gf-Xl-In4"/>
                             <constraint firstItem="WxW-kY-PK2" firstAttribute="centerY" secondItem="wBa-qD-HbQ" secondAttribute="centerY" id="8mb-FV-nrp"/>
                             <constraint firstItem="WxW-kY-PK2" firstAttribute="leading" secondItem="Vy0-Lh-OgO" secondAttribute="leading" constant="50" id="Aym-LN-WPV"/>
-                            <constraint firstItem="gp4-jK-ipn" firstAttribute="centerY" secondItem="JRK-Fn-NXc" secondAttribute="centerY" id="EYR-68-Fmv"/>
                             <constraint firstItem="ztl-Vj-8EY" firstAttribute="leading" secondItem="wBa-qD-HbQ" secondAttribute="leading" id="It0-Ad-qDd"/>
-                            <constraint firstItem="gp4-jK-ipn" firstAttribute="centerX" secondItem="JRK-Fn-NXc" secondAttribute="centerX" id="Q2T-eq-2q7"/>
-                            <constraint firstItem="FBq-0v-GpJ" firstAttribute="top" secondItem="Vy0-Lh-OgO" secondAttribute="top" constant="20" id="Q5t-LF-fsQ"/>
+                            <constraint firstItem="Vy0-Lh-OgO" firstAttribute="bottom" secondItem="gp4-jK-ipn" secondAttribute="bottom" constant="30" id="N2m-U9-Hvy"/>
+                            <constraint firstItem="gp4-jK-ipn" firstAttribute="centerX" secondItem="JRK-Fn-NXc" secondAttribute="centerX" id="RvZ-yJ-Dgh"/>
                             <constraint firstItem="29r-ku-WRb" firstAttribute="top" secondItem="WxW-kY-PK2" secondAttribute="bottom" constant="40" id="ZLB-f9-EYY"/>
                             <constraint firstItem="VIE-St-AkO" firstAttribute="centerY" secondItem="ztl-Vj-8EY" secondAttribute="centerY" id="d2w-Fp-mlK"/>
-                            <constraint firstItem="ztl-Vj-8EY" firstAttribute="trailing" secondItem="wBa-qD-HbQ" secondAttribute="trailing" id="iYe-gM-2o2"/>
-                            <constraint firstItem="f1e-8S-NCj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="29r-ku-WRb" secondAttribute="trailing" constant="10" id="jyF-Rf-g2c"/>
+                            <constraint firstItem="zcV-xy-5LM" firstAttribute="leading" secondItem="JRK-Fn-NXc" secondAttribute="leading" id="dOX-Oa-8aC"/>
+                            <constraint firstItem="Vy0-Lh-OgO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="f1e-8S-NCj" secondAttribute="trailing" constant="10" id="eiM-zw-m8i"/>
+                            <constraint firstItem="zcV-xy-5LM" firstAttribute="top" secondItem="JRK-Fn-NXc" secondAttribute="top" id="ixS-kB-5OJ"/>
+                            <constraint firstItem="WxW-kY-PK2" firstAttribute="top" secondItem="FBq-0v-GpJ" secondAttribute="bottom" constant="100" id="lIm-HX-vJf"/>
                             <constraint firstItem="VIE-St-AkO" firstAttribute="trailing" secondItem="WxW-kY-PK2" secondAttribute="trailing" id="lNT-EX-WJ8"/>
-                            <constraint firstItem="f1e-8S-NCj" firstAttribute="trailing" secondItem="WxW-kY-PK2" secondAttribute="trailing" id="nZ2-8V-Vn9"/>
+                            <constraint firstAttribute="trailing" secondItem="zcV-xy-5LM" secondAttribute="trailing" id="lRY-Ly-Ytf"/>
                             <constraint firstItem="29r-ku-WRb" firstAttribute="centerY" secondItem="f1e-8S-NCj" secondAttribute="centerY" id="tn3-we-gbc"/>
+                            <constraint firstItem="gp4-jK-ipn" firstAttribute="top" secondItem="VIE-St-AkO" secondAttribute="bottom" constant="30" id="ucF-HZ-rx5"/>
                             <constraint firstItem="VIE-St-AkO" firstAttribute="leading" secondItem="WxW-kY-PK2" secondAttribute="leading" id="vgf-o1-55I"/>
                             <constraint firstItem="VIE-St-AkO" firstAttribute="top" secondItem="WxW-kY-PK2" secondAttribute="bottom" constant="100" id="vqa-1h-Lqu"/>
                             <constraint firstItem="FBq-0v-GpJ" firstAttribute="centerX" secondItem="JRK-Fn-NXc" secondAttribute="centerX" id="z2j-10-3f2"/>
@@ -113,7 +151,7 @@
                             <outletCollection property="gestureRecognizers" destination="bu7-95-cA7" appends="YES" id="ygb-eb-dnd"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Currency Converter" image="dollarsign.square.fill" catalog="system" id="r7Q-eP-wgN" userLabel="Currency converter"/>
+                    <tabBarItem key="tabBarItem" title="Convertion" image="dollarsign.square.fill" catalog="system" id="r7Q-eP-wgN" userLabel="Currency converter"/>
                     <connections>
                         <outlet property="baseCurrencyTextField" destination="WxW-kY-PK2" id="IH2-mg-fmx"/>
                         <outlet property="rateLabel" destination="f1e-8S-NCj" id="dXQ-8w-Zu5"/>
@@ -127,120 +165,146 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1" y="-298"/>
+            <point key="canvasLocation" x="-0.80000000000000004" y="-299.10044977511245"/>
         </scene>
         <!--Weather View Controller-->
         <scene sceneID="mKk-cY-0Xo">
             <objects>
                 <viewController id="BdM-1d-NYH" userLabel="Weather View Controller" customClass="WeatherViewController" customModule="LeBaluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pqe-wT-R51">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yWY-bA-dgw" userLabel="Departure city Stack View">
-                                <rect key="frame" x="47.5" y="477.5" width="319" height="315.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky-clouds" translatesAutoresizingMaskIntoConstraints="NO" id="7xx-mZ-KTB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="yWY-bA-dgw" userLabel="Departure city Stack View">
+                                <rect key="frame" x="30" y="338" width="315" height="103.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure city name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwt-gz-PCK" userLabel="Departure City Name Label">
-                                        <rect key="frame" x="51" y="0.0" width="217.5" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <rect key="frame" x="65" y="0.0" width="185" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yNr-rc-M2c">
-                                        <rect key="frame" x="0.0" y="50" width="319" height="30"/>
+                                        <rect key="frame" x="20" y="40.5" width="275.5" height="22.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure city temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMu-rM-SZD" userLabel="Departure City Temperature Label">
-                                                <rect key="frame" x="0.0" y="0.0" width="288.5" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="249" height="22.5"/>
+                                                <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVj-Jo-uPV">
-                                                <rect key="frame" x="296.5" y="0.0" width="22.5" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <rect key="frame" x="257" y="0.0" width="18.5" height="22.5"/>
+                                                <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure city description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DR0-kP-YxS" userLabel="Departure City Description Label">
-                                        <rect key="frame" x="21" y="100" width="277.5" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <rect key="frame" x="36" y="81" width="243.5" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C8P-DY-Hl5" userLabel="Destination City Weather Picture">
-                                        <rect key="frame" x="76.5" y="150" width="166" height="165.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="C8P-DY-Hl5" secondAttribute="height" id="bA8-fl-ah0"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="p2p-vW-bnx" userLabel="Destination City Stack View">
-                                <rect key="frame" x="40" y="64" width="334" height="315.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="p2p-vW-bnx" userLabel="Destination City Stack View">
+                                <rect key="frame" x="30" y="15" width="315" height="97.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination city name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovC-O7-hco" userLabel="Destination City Name Label">
-                                        <rect key="frame" x="51" y="0.0" width="232.5" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <rect key="frame" x="56" y="0.0" width="203.5" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dCR-uO-0RY">
-                                        <rect key="frame" x="0.0" y="50" width="334" height="30"/>
+                                        <rect key="frame" x="10.5" y="37.5" width="294" height="22.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination city temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXe-R9-iFG" userLabel="Destination City Temperature Label">
-                                                <rect key="frame" x="0.0" y="0.0" width="303.5" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="267.5" height="22.5"/>
+                                                <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DY4-zA-vqk">
-                                                <rect key="frame" x="311.5" y="0.0" width="22.5" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <rect key="frame" x="275.5" y="0.0" width="18.5" height="22.5"/>
+                                                <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination city description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5N2-Ko-bg7" userLabel="Destination City Description Label">
-                                        <rect key="frame" x="21" y="100" width="292.5" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <rect key="frame" x="26.5" y="75" width="262.5" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FUC-SO-47T" userLabel="Destination City Weather Picture">
-                                        <rect key="frame" x="84" y="150" width="166" height="165.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="FUC-SO-47T" secondAttribute="height" id="WN1-YZ-mdF"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C8P-DY-Hl5" userLabel="Departure City Weather Picture">
+                                <rect key="frame" x="30" y="441.5" width="315" height="166.5"/>
+                                <color key="backgroundColor" white="1" alpha="0.49883588576158938" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FUC-SO-47T" userLabel="Destination City Weather Picture">
+                                <rect key="frame" x="30" y="112.5" width="315" height="167"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cW-Vv-oxV">
-                                <rect key="frame" x="174" y="433" width="66" height="30"/>
-                                <color key="backgroundColor" red="0.5802235603" green="0.179700315" blue="0.16792595390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="50" y="284.5" width="275" height="48.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="25"/>
+                                <size key="titleShadowOffset" width="0.0" height="-4"/>
                                 <state key="normal" title="Rafraichir"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="tappedRefreshButton" destination="BdM-1d-NYH" eventType="touchUpInside" id="qlT-uq-7uZ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="srE-HU-tw2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="FUC-SO-47T" firstAttribute="width" secondItem="pqe-wT-R51" secondAttribute="width" multiplier="0.4" id="1BA-PX-mku"/>
+                            <constraint firstItem="srE-HU-tw2" firstAttribute="bottom" secondItem="C8P-DY-Hl5" secondAttribute="bottom" constant="10" id="09A-Uz-4Ah"/>
+                            <constraint firstItem="7xx-mZ-KTB" firstAttribute="top" secondItem="pqe-wT-R51" secondAttribute="top" id="3hR-e7-ztc"/>
+                            <constraint firstAttribute="bottom" secondItem="7xx-mZ-KTB" secondAttribute="bottom" id="4k4-ow-12G"/>
+                            <constraint firstAttribute="trailing" secondItem="7xx-mZ-KTB" secondAttribute="trailing" id="5Vd-CF-SXf"/>
+                            <constraint firstItem="C8P-DY-Hl5" firstAttribute="height" secondItem="FUC-SO-47T" secondAttribute="height" id="7GX-PJ-8ht"/>
                             <constraint firstItem="6cW-Vv-oxV" firstAttribute="centerX" secondItem="pqe-wT-R51" secondAttribute="centerX" id="8ct-A1-f9j"/>
+                            <constraint firstItem="FUC-SO-47T" firstAttribute="leading" secondItem="p2p-vW-bnx" secondAttribute="leading" id="CWv-4r-tNe"/>
                             <constraint firstItem="yWY-bA-dgw" firstAttribute="centerX" secondItem="pqe-wT-R51" secondAttribute="centerX" id="ChU-wb-JQ8"/>
-                            <constraint firstItem="p2p-vW-bnx" firstAttribute="centerX" secondItem="pqe-wT-R51" secondAttribute="centerX" id="Die-ev-5pv"/>
-                            <constraint firstItem="C8P-DY-Hl5" firstAttribute="width" secondItem="pqe-wT-R51" secondAttribute="width" multiplier="0.4" id="J21-jf-EQr"/>
-                            <constraint firstItem="6cW-Vv-oxV" firstAttribute="centerY" secondItem="pqe-wT-R51" secondAttribute="centerY" id="MmW-4j-I8L"/>
-                            <constraint firstItem="srE-HU-tw2" firstAttribute="bottom" secondItem="yWY-bA-dgw" secondAttribute="bottom" constant="20" id="P9Z-R6-PXa"/>
-                            <constraint firstItem="p2p-vW-bnx" firstAttribute="top" secondItem="srE-HU-tw2" secondAttribute="top" constant="20" id="Pza-Sa-zcZ"/>
-                            <constraint firstItem="yWY-bA-dgw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="p2p-vW-bnx" secondAttribute="bottom" constant="30" id="Vs5-X8-CAr"/>
+                            <constraint firstItem="yWY-bA-dgw" firstAttribute="top" secondItem="6cW-Vv-oxV" secondAttribute="bottom" constant="5" id="GHS-EY-NBL"/>
+                            <constraint firstItem="FUC-SO-47T" firstAttribute="top" secondItem="p2p-vW-bnx" secondAttribute="bottom" id="Hcg-o9-0yi"/>
+                            <constraint firstItem="6cW-Vv-oxV" firstAttribute="leading" secondItem="FUC-SO-47T" secondAttribute="leading" constant="20" id="I50-JA-l96"/>
+                            <constraint firstItem="yWY-bA-dgw" firstAttribute="leading" secondItem="srE-HU-tw2" secondAttribute="leading" constant="30" id="Nj9-Gs-V7f"/>
+                            <constraint firstItem="C8P-DY-Hl5" firstAttribute="height" secondItem="7xx-mZ-KTB" secondAttribute="height" multiplier="0.25" id="OVZ-Pm-yJu"/>
+                            <constraint firstItem="FUC-SO-47T" firstAttribute="trailing" secondItem="p2p-vW-bnx" secondAttribute="trailing" id="Pln-Gd-Sdp"/>
+                            <constraint firstItem="p2p-vW-bnx" firstAttribute="top" secondItem="srE-HU-tw2" secondAttribute="top" constant="15" id="Pza-Sa-zcZ"/>
+                            <constraint firstItem="C8P-DY-Hl5" firstAttribute="centerX" secondItem="pqe-wT-R51" secondAttribute="centerX" id="Tdc-Og-frI"/>
+                            <constraint firstItem="FUC-SO-47T" firstAttribute="centerX" secondItem="pqe-wT-R51" secondAttribute="centerX" id="cla-dr-yO4"/>
+                            <constraint firstItem="p2p-vW-bnx" firstAttribute="leading" secondItem="srE-HU-tw2" secondAttribute="leading" constant="30" id="dFy-kb-8b0"/>
+                            <constraint firstItem="C8P-DY-Hl5" firstAttribute="top" secondItem="yWY-bA-dgw" secondAttribute="bottom" id="ejK-AB-Iaw"/>
+                            <constraint firstItem="6cW-Vv-oxV" firstAttribute="top" secondItem="FUC-SO-47T" secondAttribute="bottom" constant="5" id="iMF-SZ-neW"/>
+                            <constraint firstItem="C8P-DY-Hl5" firstAttribute="trailing" secondItem="yWY-bA-dgw" secondAttribute="trailing" id="mNn-XS-W1S"/>
+                            <constraint firstItem="C8P-DY-Hl5" firstAttribute="leading" secondItem="yWY-bA-dgw" secondAttribute="leading" id="sWZ-dl-jmU"/>
+                            <constraint firstItem="7xx-mZ-KTB" firstAttribute="leading" secondItem="pqe-wT-R51" secondAttribute="leading" id="vc1-5l-vmR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Weather" image="cloud.sun.rain.fill" catalog="system" id="Y5l-1g-sY3"/>
+                    <tabBarItem key="tabBarItem" title="Météo" image="cloud.sun.rain.fill" catalog="system" id="Y5l-1g-sY3"/>
                     <connections>
                         <outlet property="departureCityNameLabel" destination="vwt-gz-PCK" id="xGp-MQ-I4D"/>
                         <outlet property="departureCityTemperatureLabel" destination="eMu-rM-SZD" id="8DV-xY-PP9"/>
@@ -254,82 +318,139 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oNZ-G1-CfI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="1002.4553571428571"/>
+            <point key="canvasLocation" x="-0.80000000000000004" y="1001.649175412294"/>
         </scene>
         <!--Translation View Controller-->
         <scene sceneID="RDY-9y-hPt">
             <objects>
                 <viewController id="GJf-Xg-OTE" userLabel="Translation View Controller" customClass="TranslationViewController" customModule="LeBaluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CHE-vQ-D81">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7f-6j-eOq" userLabel="Source Language Label">
-                                <rect key="frame" x="116.5" y="64" width="181" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT8-5M-nuq" userLabel="Target Language Label">
-                                <rect key="frame" x="121" y="479" width="172" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Text to traduce" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Qx-4O-NGj" userLabel="Target Language Text View">
-                                <rect key="frame" x="20" y="529" width="374" height="264"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXx-Ag-rXz">
-                                <rect key="frame" x="163.5" y="407" width="87" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Traduire"/>
-                                <connections>
-                                    <action selector="tappedTranslationButton" destination="GJf-Xg-OTE" eventType="touchUpInside" id="QUG-Yt-QaV"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="Texte à traduire" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WVo-Dv-5LT" userLabel="Source Language Text View">
-                                <rect key="frame" x="20" y="114" width="374" height="273"/>
-                                <color key="backgroundColor" systemColor="systemGray4Color"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PY3-J2-NHe">
-                                <rect key="frame" x="308" y="407" width="86" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Inverser"/>
-                                <connections>
-                                    <action selector="tappedInversionButton" destination="GJf-Xg-OTE" eventType="touchUpInside" id="4Fl-UF-Aak"/>
-                                </connections>
-                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calligraphy-text" translatesAutoresizingMaskIntoConstraints="NO" id="wg2-yE-Jzc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="584"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hpw-cY-fU9" userLabel="Source Stack View">
+                                <rect key="frame" x="20" y="10" width="335" height="249"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7f-6j-eOq" userLabel="Source Language Label">
+                                        <rect key="frame" x="68" y="0.0" width="199" height="28"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="Texte à traduire" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WVo-Dv-5LT" userLabel="Source Language Text View">
+                                        <rect key="frame" x="0.0" y="38" width="335" height="211"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Hf-lq-MtZ" userLabel="Target Stack View">
+                                <rect key="frame" x="20" y="359" width="335" height="249"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT8-5M-nuq" userLabel="Target Language Label">
+                                        <rect key="frame" x="69.5" y="0.0" width="196" height="28"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Text to traduce" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Qx-4O-NGj" userLabel="Target Language Text View">
+                                        <rect key="frame" x="0.0" y="38" width="335" height="211"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="z5O-MP-buW" userLabel="Buttons Stack View">
+                                <rect key="frame" x="69.5" y="289" width="236" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXx-Ag-rXz">
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="25"/>
+                                        <state key="normal" title="Traduire"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tappedTranslationButton" destination="GJf-Xg-OTE" eventType="touchUpInside" id="QUG-Yt-QaV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PY3-J2-NHe">
+                                        <rect key="frame" x="141" y="0.0" width="95" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="25"/>
+                                        <state key="normal" title="Inverser"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tappedInversionButton" destination="GJf-Xg-OTE" eventType="touchUpInside" id="4Fl-UF-Aak"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2Sh-fP-Jmc"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="2Sh-fP-Jmc" firstAttribute="trailing" secondItem="7Qx-4O-NGj" secondAttribute="trailing" constant="20" id="2GL-bu-TXc"/>
-                            <constraint firstItem="2Sh-fP-Jmc" firstAttribute="trailing" secondItem="PY3-J2-NHe" secondAttribute="trailing" constant="20" id="3qJ-ca-tZO"/>
-                            <constraint firstItem="MXx-Ag-rXz" firstAttribute="centerX" secondItem="CHE-vQ-D81" secondAttribute="centerX" id="7Cu-K6-XO9"/>
-                            <constraint firstItem="2Sh-fP-Jmc" firstAttribute="trailing" secondItem="WVo-Dv-5LT" secondAttribute="trailing" constant="20" id="89m-dS-Po5"/>
-                            <constraint firstItem="7Qx-4O-NGj" firstAttribute="top" secondItem="LT8-5M-nuq" secondAttribute="bottom" constant="20" id="B1B-Gm-321"/>
-                            <constraint firstItem="2Sh-fP-Jmc" firstAttribute="bottom" secondItem="7Qx-4O-NGj" secondAttribute="bottom" constant="20" id="Huy-vT-SE0"/>
-                            <constraint firstItem="LT8-5M-nuq" firstAttribute="top" secondItem="MXx-Ag-rXz" secondAttribute="bottom" constant="30" id="ZeT-4W-ZYU"/>
-                            <constraint firstItem="WVo-Dv-5LT" firstAttribute="leading" secondItem="2Sh-fP-Jmc" secondAttribute="leading" constant="20" id="bm5-Lh-Tyh"/>
-                            <constraint firstItem="MXx-Ag-rXz" firstAttribute="top" secondItem="PY3-J2-NHe" secondAttribute="top" id="eV6-2d-DnV"/>
-                            <constraint firstItem="V7f-6j-eOq" firstAttribute="top" secondItem="2Sh-fP-Jmc" secondAttribute="top" constant="20" id="fUr-EE-dVG"/>
-                            <constraint firstItem="MXx-Ag-rXz" firstAttribute="bottom" secondItem="PY3-J2-NHe" secondAttribute="bottom" id="fks-7i-eqx"/>
-                            <constraint firstItem="MXx-Ag-rXz" firstAttribute="top" secondItem="WVo-Dv-5LT" secondAttribute="bottom" constant="20" id="fxP-Rr-7Zg"/>
-                            <constraint firstItem="WVo-Dv-5LT" firstAttribute="top" secondItem="V7f-6j-eOq" secondAttribute="bottom" constant="20" id="gvo-24-POl"/>
-                            <constraint firstItem="MXx-Ag-rXz" firstAttribute="centerY" secondItem="CHE-vQ-D81" secondAttribute="centerY" constant="-20" id="hbW-hY-Z10"/>
-                            <constraint firstItem="V7f-6j-eOq" firstAttribute="centerX" secondItem="CHE-vQ-D81" secondAttribute="centerX" id="hgE-R0-Cit"/>
-                            <constraint firstItem="7Qx-4O-NGj" firstAttribute="leading" secondItem="2Sh-fP-Jmc" secondAttribute="leading" constant="20" id="kgF-7H-11N"/>
-                            <constraint firstItem="LT8-5M-nuq" firstAttribute="centerX" secondItem="CHE-vQ-D81" secondAttribute="centerX" id="vhd-1O-s3b"/>
+                            <constraint firstItem="WVo-Dv-5LT" firstAttribute="leading" secondItem="2Sh-fP-Jmc" secondAttribute="leading" constant="20" id="4BB-xB-ZZM"/>
+                            <constraint firstItem="hpw-cY-fU9" firstAttribute="leading" secondItem="2Sh-fP-Jmc" secondAttribute="leading" constant="20" id="4R0-ae-Nqa"/>
+                            <constraint firstItem="7Qx-4O-NGj" firstAttribute="width" secondItem="WVo-Dv-5LT" secondAttribute="width" id="6iw-3V-Gtx"/>
+                            <constraint firstItem="wg2-yE-Jzc" firstAttribute="top" secondItem="CHE-vQ-D81" secondAttribute="top" id="9Mj-zP-Fcy"/>
+                            <constraint firstItem="hpw-cY-fU9" firstAttribute="top" secondItem="2Sh-fP-Jmc" secondAttribute="top" constant="10" id="A6F-rY-rLu"/>
+                            <constraint firstItem="2Sh-fP-Jmc" firstAttribute="trailing" secondItem="hpw-cY-fU9" secondAttribute="trailing" constant="20" id="AOP-86-oIH"/>
+                            <constraint firstItem="7Qx-4O-NGj" firstAttribute="height" secondItem="WVo-Dv-5LT" secondAttribute="height" id="BWd-rY-CaQ"/>
+                            <constraint firstItem="4Hf-lq-MtZ" firstAttribute="leading" secondItem="2Sh-fP-Jmc" secondAttribute="leading" constant="20" id="CWd-uA-lOD"/>
+                            <constraint firstItem="2Sh-fP-Jmc" firstAttribute="trailing" secondItem="4Hf-lq-MtZ" secondAttribute="trailing" constant="20" id="DdM-y0-kac"/>
+                            <constraint firstAttribute="trailing" secondItem="wg2-yE-Jzc" secondAttribute="trailing" id="QgI-OO-LI3"/>
+                            <constraint firstItem="4Hf-lq-MtZ" firstAttribute="top" secondItem="z5O-MP-buW" secondAttribute="bottom" constant="30" id="Qxm-dt-K29"/>
+                            <constraint firstAttribute="bottom" secondItem="wg2-yE-Jzc" secondAttribute="bottom" constant="83" id="Xb9-5r-1r0"/>
+                            <constraint firstItem="2Sh-fP-Jmc" firstAttribute="bottom" secondItem="4Hf-lq-MtZ" secondAttribute="bottom" constant="10" id="bc3-de-fur"/>
+                            <constraint firstItem="z5O-MP-buW" firstAttribute="centerX" secondItem="CHE-vQ-D81" secondAttribute="centerX" id="dOH-Qj-DKK"/>
+                            <constraint firstItem="hpw-cY-fU9" firstAttribute="centerX" secondItem="CHE-vQ-D81" secondAttribute="centerX" id="kmv-sP-kD4"/>
+                            <constraint firstItem="z5O-MP-buW" firstAttribute="top" secondItem="hpw-cY-fU9" secondAttribute="bottom" constant="30" id="sxF-n7-Akf"/>
+                            <constraint firstItem="wg2-yE-Jzc" firstAttribute="leading" secondItem="CHE-vQ-D81" secondAttribute="leading" id="wPW-wV-wEH"/>
+                            <constraint firstItem="4Hf-lq-MtZ" firstAttribute="centerX" secondItem="CHE-vQ-D81" secondAttribute="centerX" id="xVB-is-ObE"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fWL-Ny-hoM" appends="YES" id="3su-pR-AnC"/>
+                        </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Translation" image="doc.text.fill" catalog="system" id="ASp-2m-g0f"/>
+                    <tabBarItem key="tabBarItem" title="Traduction" image="doc.text.fill" catalog="system" id="ASp-2m-g0f"/>
                     <connections>
                         <outlet property="sourceLanguageLabel" destination="V7f-6j-eOq" id="rz1-lR-LIQ"/>
                         <outlet property="sourceLanguageTextView" destination="WVo-Dv-5LT" id="rgX-Bf-tps"/>
@@ -338,22 +459,24 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KU0-Ij-0sj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fWL-Ny-hoM">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="GJf-Xg-OTE" id="fd1-gs-APX"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="0.0" y="345.53571428571428"/>
         </scene>
     </scenes>
     <resources>
+        <image name="calligraphy-text" width="390" height="512"/>
         <image name="cloud.sun.rain.fill" catalog="system" width="128" height="125"/>
         <image name="doc.text.fill" catalog="system" width="115" height="128"/>
         <image name="dollarsign.square.fill" catalog="system" width="128" height="114"/>
+        <image name="euro-dollar-cut" width="390" height="428"/>
+        <image name="sky-clouds" width="390" height="512"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

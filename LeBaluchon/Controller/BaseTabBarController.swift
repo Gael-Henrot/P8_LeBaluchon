@@ -14,7 +14,13 @@ class BaseTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedIndex = defaultIndex
+    }
+}
 
-        // Do any additional setup after loading the view.
+/// This extension allows to change the corner radius of every UIView in the storyboard.
+public extension UIView {
+    @IBInspectable var cornerRadius: CGFloat {
+        get { return layer.cornerRadius }
+        set { layer.cornerRadius = newValue }
     }
 }

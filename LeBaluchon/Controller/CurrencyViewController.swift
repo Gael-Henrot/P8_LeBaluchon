@@ -8,13 +8,16 @@
 import UIKit
 
 class CurrencyViewController: UIViewController {
+    
+    //MARK: - Properties:
 
     @IBOutlet weak var baseCurrencyTextField: UITextField!
     @IBOutlet weak var targetCurrencyTextField: UITextField!
     @IBOutlet var rateLabel: UILabel!
     
     var rate: Double = 0.0
-//    var baseCurrencyAmount: Double = 0.0
+    
+    //MARK: - Methods
     
     @IBAction func tappedConvertButton() {
         convert()
@@ -49,7 +52,7 @@ class CurrencyViewController: UIViewController {
         guard let baseCurrencyAmount = Double(baseCurrency) else {
             return
         }
-        targetCurrencyTextField.text = "\(baseCurrencyAmount * rate)"
+        targetCurrencyTextField.text = "\(round(100*(baseCurrencyAmount * rate))/100)"
     }
     
     /// This method presents a standard Alert Controller to warn the user when a problem occurrs during the rate update.

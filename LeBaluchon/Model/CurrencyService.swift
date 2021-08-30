@@ -56,7 +56,3 @@ class CurrencyService {
         task.resume()
     }
 }
-
-/*enum CurrencyError: Error {
-    case noData, incorrectResponse, JSONTrouble
-}*/

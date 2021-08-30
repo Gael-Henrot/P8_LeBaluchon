@@ -17,6 +17,7 @@
 		7C97057C26D62B2E00D5EC3F /* TranslationData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C97057B26D62B2E00D5EC3F /* TranslationData.json */; };
 		7C97057E26D62CC200D5EC3F /* TranslationServiceTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C97057D26D62CC200D5EC3F /* TranslationServiceTestCases.swift */; };
 		7C97058026D62D1B00D5EC3F /* FakeTranslationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C97057F26D62D1B00D5EC3F /* FakeTranslationData.swift */; };
+		7C97058226D7E0F000D5EC3F /* umbrage2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C97058126D7E0F000D5EC3F /* umbrage2.ttf */; };
 		7CA659A626A9A26400432F93 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA659A526A9A26400432F93 /* APIKeys.swift */; };
 		7CD22DD726B426FE002D2AC2 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD22DD626B426FE002D2AC2 /* Translation.swift */; };
 		7CF6DD1426A570440079C41A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF6DD1326A570440079C41A /* AppDelegate.swift */; };
@@ -58,6 +59,7 @@
 		7C97057B26D62B2E00D5EC3F /* TranslationData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TranslationData.json; sourceTree = "<group>"; };
 		7C97057D26D62CC200D5EC3F /* TranslationServiceTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationServiceTestCases.swift; sourceTree = "<group>"; };
 		7C97057F26D62D1B00D5EC3F /* FakeTranslationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTranslationData.swift; sourceTree = "<group>"; };
+		7C97058126D7E0F000D5EC3F /* umbrage2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = umbrage2.ttf; sourceTree = "<group>"; };
 		7CA659A526A9A26400432F93 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		7CD22DD626B426FE002D2AC2 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		7CF6DD1026A570440079C41A /* LeBaluchon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeBaluchon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +162,7 @@
 				7CF6DD1526A570440079C41A /* SceneDelegate.swift */,
 				7CF6DD2126A570460079C41A /* Info.plist */,
 				7CA659A526A9A26400432F93 /* APIKeys.swift */,
+				7C97058126D7E0F000D5EC3F /* umbrage2.ttf */,
 			);
 			path = LeBaluchon;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CF6DD2026A570460079C41A /* LaunchScreen.storyboard in Resources */,
+				7C97058226D7E0F000D5EC3F /* umbrage2.ttf in Resources */,
 				7CF6DD1D26A570460079C41A /* Assets.xcassets in Resources */,
 				7CF6DD1B26A570440079C41A /* Main.storyboard in Resources */,
 			);

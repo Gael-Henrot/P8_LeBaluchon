@@ -28,6 +28,7 @@ class TranslationViewController: UIViewController {
     //MARK: - Methods
     @IBAction func tappedTranslationButton() {
         getTranslation()
+        sourceLanguageTextView.resignFirstResponder()
     }
     
     /// This method call the model getTranslation method and display the result.
@@ -45,7 +46,7 @@ class TranslationViewController: UIViewController {
     @IBAction func tappedInversionButton() {
         swap(&translationService.sourceLanguageCode, &translationService.targetLanguageCode)
         swap(&(sourceLanguageLabel.text)!, &(targetLanguageLabel.text)!)
-        swap(&sourceLanguageTextView.text,&targetLanguageTextView.text)
+        swap(&sourceLanguageTextView.text, &targetLanguageTextView.text)
     }
     
     /// This method swap the value (String) of two variables.
@@ -58,5 +59,10 @@ class TranslationViewController: UIViewController {
         let alertVC = UIAlertController(title: "Error", message: "The translation download failed.", preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         present(alertVC, animated: true, completion: nil)
+    }
+    
+    /// This method hides the keyboard if the user touch outside the keyboard.
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        sourceLanguageTextView.resignFirstResponder()
     }
 }
