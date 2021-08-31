@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Data model sent by the API.
 struct TranslationDataModel: Decodable {
     let data: DataElement
 }
@@ -19,6 +20,7 @@ struct TranslationsElement: Decodable {
     let translatedText: String
 }
 
+// Data model required by the application.
 struct TranslationData {
     let translatedText: String
 }

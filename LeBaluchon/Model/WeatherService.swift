@@ -27,6 +27,7 @@ class WeatherService {
     var destinationSession: URLSession
     var destinationPictureSession: URLSession
     
+    //MARK: - Initializers
     init(departureSession: URLSession = URLSession(configuration: .default), departurePictureSession: URLSession = URLSession(configuration: .default), destinationSession: URLSession = URLSession(configuration: .default), destinationPictureSession: URLSession = URLSession(configuration: .default)) {
         self.departureSession = departureSession
         self.departurePictureSession = departurePictureSession
@@ -34,6 +35,7 @@ class WeatherService {
         self.destinationPictureSession = destinationPictureSession
     }
     
+    //MARK: - Methods
     /// This method gives the name, the temperature, the description and the picture of the weather of the departure city using the getWeather method.
     func getDepartureWeather(callback: @escaping (Bool, WeatherData?) -> Void) {
         getWeather(weatherSession: departureSession, url: departureUrl, pictureSession: departurePictureSession) { (success, data) in
@@ -69,15 +71,9 @@ class WeatherService {
                 }
                 
                 let name = responseJSON.name
+                let description = responseJSON.weather.first!.description.firstUppercased
+                let icon = responseJSON.weather.first!.icon
                 
-                guard let description = responseJSON.weather.first?.description.firstUppercased else {
-                    callback(false, nil)
-                    return
-                }
-                guard let icon = responseJSON.weather.first?.icon else {
-                    callback(false, nil)
-                    return
-                }
                 let temperature = round(responseJSON.main.temp * 10) / 10
                 self.getPicture(session: pictureSession, iconId: icon) { data in
                     guard let data = data else {

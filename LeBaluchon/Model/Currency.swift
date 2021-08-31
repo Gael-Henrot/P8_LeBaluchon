@@ -7,12 +7,14 @@
 
 import Foundation
 
+// Data model sent by the API.
 struct CurrencyDataModel: Decodable {
     var base : String
     var date : String
     var rates = [String : Double]()
 }
 
+// Data model required by the application.
 struct CurrencyData {
     var base : String
     var date : String

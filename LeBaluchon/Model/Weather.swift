@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Data model sent by the API.
 struct WeatherDataModel: Decodable {
     var weather: [Weather]
     var main: Main
@@ -39,6 +40,7 @@ struct Main: Decodable {
     }
 }
 
+// Data model required by the application.
 struct WeatherData {
     var name: String
     var description: String

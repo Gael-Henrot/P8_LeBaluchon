@@ -9,6 +9,7 @@ import Foundation
 
 class CurrencyService {
     
+    //MARK: - Properties
     private static let currencyUrl = "http://data.fixer.io/api/"
     
     private static let accessKey = APIKeys.dataFixerIOAPIKey
@@ -17,9 +18,12 @@ class CurrencyService {
     
     private var session: URLSession
     
+    //MARK: - Initializers
     init(session: URLSession = URLSession(configuration: .default)) {
         self.session = session
     }
+    
+    //MARK: - Methods
     /// This method provides the rate between the base currency and the target currency from the data.fixer.io API.
     func getCurrencyRate(callback: @escaping (Bool, CurrencyData?) -> Void) {
         

@@ -9,6 +9,7 @@ import UIKit
 
 class WeatherViewController: UIViewController {
     
+    //MARK: - Properties
     @IBOutlet weak var destinationCityNameLabel: UILabel!
     @IBOutlet weak var destinationCityTemperatureLabel: UILabel!
     @IBOutlet weak var destinationCityWeatherDescription: UILabel!
@@ -17,6 +18,12 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var departureCityTemperatureLabel: UILabel!
     @IBOutlet weak var departureCityWeatherDescription: UILabel!
     @IBOutlet weak var departureCityWeatherPicture : UIImageView!
+    @IBOutlet weak var destinationActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var departureActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var destinationStackView: UIStackView!
+    @IBOutlet weak var departureStackView: UIStackView!
+    
+    //MARK: - Methods
     
     @IBAction func tappedRefreshButton() {
         refreshWeather()
@@ -29,8 +36,10 @@ class WeatherViewController: UIViewController {
         refreshWeather()
     }
     
-    /// This method refresh all the weather data (description, picture, etc.) to display.
+    /// This method refreshes all the weather data (description, picture, etc.) to display and manages the display during loading.
     private func refreshWeather() {
+        self.toggleActivityIndicator(location: .departure, show: true)
+        self.toggleActivityIndicator(location: .destination, show: true)
         
         weatherService.getDepartureWeather(callback: { (success, weatherData) in
             guard success else {
@@ -42,6 +51,7 @@ class WeatherViewController: UIViewController {
                 self.departureCityTemperatureLabel.text = String(weatherData.temperature)
                 self.departureCityWeatherDescription.text = weatherData.description
                 self.departureCityWeatherPicture.image = UIImage(data: weatherData.picture)
+                self.toggleActivityIndicator(location: .departure, show: false)
             } else {
                 self.presentAlert()
             }
@@ -57,6 +67,7 @@ class WeatherViewController: UIViewController {
                 self.destinationCityTemperatureLabel.text = String(weatherData.temperature)
                 self.destinationCityWeatherDescription.text = weatherData.description
                 self.destinationCityWeatherPicture.image = UIImage(data: weatherData.picture)
+                self.toggleActivityIndicator(location: .destination, show: false)
             } else {
                 self.presentAlert()
             }
@@ -68,5 +79,25 @@ class WeatherViewController: UIViewController {
         let alertVC = UIAlertController(title: "Error", message: "The weather download failed.", preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         present(alertVC, animated: true, completion: nil)
+    }
+    
+    private enum Location {
+        case departure, destination
+    }
+    
+    /// This method hides or shows the description stackview, the picture or the activity indicator according to the location.
+    private func toggleActivityIndicator(location: Location, show: Bool) {
+        switch location {
+        case .departure :
+            departureStackView.isHidden = show
+            departureCityWeatherPicture.isHidden = show
+            departureActivityIndicator.isHidden = !show
+            
+        case .destination :
+            destinationStackView.isHidden = show
+            destinationCityWeatherPicture.isHidden = show
+            destinationActivityIndicator.isHidden = !show
+        }
+        
     }
 }

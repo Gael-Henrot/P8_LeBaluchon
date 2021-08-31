@@ -22,8 +22,6 @@ class TranslationService {
     
     //MARK: - Initializers
     
-    private init() {}
-    
     init(translationSession: URLSession) {
         self.translationSession = translationSession
     }

@@ -44,31 +44,31 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.00" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WxW-kY-PK2" userLabel="Base Currency Text Field">
-                                <rect key="frame" x="50" y="325" width="189" height="43.5"/>
+                                <rect key="frame" x="50" y="324.5" width="159" height="44"/>
                                 <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Euro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBa-qD-HbQ">
-                                <rect key="frame" x="259" y="330" width="66" height="34"/>
+                                <rect key="frame" x="229" y="329.5" width="96" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.00" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VIE-St-AkO" userLabel="Target Currency Text Field">
-                                <rect key="frame" x="50" y="468.5" width="189" height="43.5"/>
+                                <rect key="frame" x="50" y="468.5" width="159" height="43.5"/>
                                 <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dollar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztl-Vj-8EY">
-                                <rect key="frame" x="259" y="473.5" width="96" height="34"/>
+                                <rect key="frame" x="229" y="473.5" width="96" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taux de change:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29r-ku-WRb">
-                                <rect key="frame" x="50" y="408.5" width="150" height="22.5"/>
+                                <rect key="frame" x="50" y="408.5" width="159" height="22.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -80,7 +80,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1e-8S-NCj">
-                                <rect key="frame" x="259" y="406" width="26.5" height="28"/>
+                                <rect key="frame" x="229" y="406" width="26.5" height="28"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -92,7 +92,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Convertissons tout cet argent!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBq-0v-GpJ">
-                                <rect key="frame" x="20" y="157.5" width="335" height="67.5"/>
+                                <rect key="frame" x="20" y="157" width="335" height="67.5"/>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -133,6 +133,7 @@
                             <constraint firstItem="ztl-Vj-8EY" firstAttribute="leading" secondItem="wBa-qD-HbQ" secondAttribute="leading" id="It0-Ad-qDd"/>
                             <constraint firstItem="Vy0-Lh-OgO" firstAttribute="bottom" secondItem="gp4-jK-ipn" secondAttribute="bottom" constant="30" id="N2m-U9-Hvy"/>
                             <constraint firstItem="gp4-jK-ipn" firstAttribute="centerX" secondItem="JRK-Fn-NXc" secondAttribute="centerX" id="RvZ-yJ-Dgh"/>
+                            <constraint firstItem="ztl-Vj-8EY" firstAttribute="trailing" secondItem="wBa-qD-HbQ" secondAttribute="trailing" id="WtF-uh-HWE"/>
                             <constraint firstItem="29r-ku-WRb" firstAttribute="top" secondItem="WxW-kY-PK2" secondAttribute="bottom" constant="40" id="ZLB-f9-EYY"/>
                             <constraint firstItem="VIE-St-AkO" firstAttribute="centerY" secondItem="ztl-Vj-8EY" secondAttribute="centerY" id="d2w-Fp-mlK"/>
                             <constraint firstItem="zcV-xy-5LM" firstAttribute="leading" secondItem="JRK-Fn-NXc" secondAttribute="leading" id="dOX-Oa-8aC"/>
@@ -141,6 +142,7 @@
                             <constraint firstItem="WxW-kY-PK2" firstAttribute="top" secondItem="FBq-0v-GpJ" secondAttribute="bottom" constant="100" id="lIm-HX-vJf"/>
                             <constraint firstItem="VIE-St-AkO" firstAttribute="trailing" secondItem="WxW-kY-PK2" secondAttribute="trailing" id="lNT-EX-WJ8"/>
                             <constraint firstAttribute="trailing" secondItem="zcV-xy-5LM" secondAttribute="trailing" id="lRY-Ly-Ytf"/>
+                            <constraint firstItem="29r-ku-WRb" firstAttribute="trailing" secondItem="WxW-kY-PK2" secondAttribute="trailing" id="nOv-ah-w4V"/>
                             <constraint firstItem="29r-ku-WRb" firstAttribute="centerY" secondItem="f1e-8S-NCj" secondAttribute="centerY" id="tn3-we-gbc"/>
                             <constraint firstItem="gp4-jK-ipn" firstAttribute="top" secondItem="VIE-St-AkO" secondAttribute="bottom" constant="30" id="ucF-HZ-rx5"/>
                             <constraint firstItem="VIE-St-AkO" firstAttribute="leading" secondItem="WxW-kY-PK2" secondAttribute="leading" id="vgf-o1-55I"/>
@@ -275,6 +277,12 @@
                                     <action selector="tappedRefreshButton" destination="BdM-1d-NYH" eventType="touchUpInside" id="qlT-uq-7uZ"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="XEj-ZD-efh">
+                                <rect key="frame" x="169" y="15" width="37" height="264.5"/>
+                            </activityIndicatorView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="aSL-73-tyZ">
+                                <rect key="frame" x="169" y="338" width="37" height="270"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="srE-HU-tw2"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -282,6 +290,7 @@
                             <constraint firstItem="srE-HU-tw2" firstAttribute="bottom" secondItem="C8P-DY-Hl5" secondAttribute="bottom" constant="10" id="09A-Uz-4Ah"/>
                             <constraint firstItem="7xx-mZ-KTB" firstAttribute="top" secondItem="pqe-wT-R51" secondAttribute="top" id="3hR-e7-ztc"/>
                             <constraint firstAttribute="bottom" secondItem="7xx-mZ-KTB" secondAttribute="bottom" id="4k4-ow-12G"/>
+                            <constraint firstItem="aSL-73-tyZ" firstAttribute="bottom" secondItem="C8P-DY-Hl5" secondAttribute="bottom" id="5B6-sA-5LE"/>
                             <constraint firstAttribute="trailing" secondItem="7xx-mZ-KTB" secondAttribute="trailing" id="5Vd-CF-SXf"/>
                             <constraint firstItem="C8P-DY-Hl5" firstAttribute="height" secondItem="FUC-SO-47T" secondAttribute="height" id="7GX-PJ-8ht"/>
                             <constraint firstItem="6cW-Vv-oxV" firstAttribute="centerX" secondItem="pqe-wT-R51" secondAttribute="centerX" id="8ct-A1-f9j"/>
@@ -290,30 +299,39 @@
                             <constraint firstItem="yWY-bA-dgw" firstAttribute="top" secondItem="6cW-Vv-oxV" secondAttribute="bottom" constant="5" id="GHS-EY-NBL"/>
                             <constraint firstItem="FUC-SO-47T" firstAttribute="top" secondItem="p2p-vW-bnx" secondAttribute="bottom" id="Hcg-o9-0yi"/>
                             <constraint firstItem="6cW-Vv-oxV" firstAttribute="leading" secondItem="FUC-SO-47T" secondAttribute="leading" constant="20" id="I50-JA-l96"/>
+                            <constraint firstItem="aSL-73-tyZ" firstAttribute="centerX" secondItem="pqe-wT-R51" secondAttribute="centerX" id="L4e-2C-d3x"/>
                             <constraint firstItem="yWY-bA-dgw" firstAttribute="leading" secondItem="srE-HU-tw2" secondAttribute="leading" constant="30" id="Nj9-Gs-V7f"/>
                             <constraint firstItem="C8P-DY-Hl5" firstAttribute="height" secondItem="7xx-mZ-KTB" secondAttribute="height" multiplier="0.25" id="OVZ-Pm-yJu"/>
                             <constraint firstItem="FUC-SO-47T" firstAttribute="trailing" secondItem="p2p-vW-bnx" secondAttribute="trailing" id="Pln-Gd-Sdp"/>
                             <constraint firstItem="p2p-vW-bnx" firstAttribute="top" secondItem="srE-HU-tw2" secondAttribute="top" constant="15" id="Pza-Sa-zcZ"/>
                             <constraint firstItem="C8P-DY-Hl5" firstAttribute="centerX" secondItem="pqe-wT-R51" secondAttribute="centerX" id="Tdc-Og-frI"/>
+                            <constraint firstItem="XEj-ZD-efh" firstAttribute="top" secondItem="p2p-vW-bnx" secondAttribute="top" id="a90-n5-lky"/>
                             <constraint firstItem="FUC-SO-47T" firstAttribute="centerX" secondItem="pqe-wT-R51" secondAttribute="centerX" id="cla-dr-yO4"/>
                             <constraint firstItem="p2p-vW-bnx" firstAttribute="leading" secondItem="srE-HU-tw2" secondAttribute="leading" constant="30" id="dFy-kb-8b0"/>
                             <constraint firstItem="C8P-DY-Hl5" firstAttribute="top" secondItem="yWY-bA-dgw" secondAttribute="bottom" id="ejK-AB-Iaw"/>
                             <constraint firstItem="6cW-Vv-oxV" firstAttribute="top" secondItem="FUC-SO-47T" secondAttribute="bottom" constant="5" id="iMF-SZ-neW"/>
                             <constraint firstItem="C8P-DY-Hl5" firstAttribute="trailing" secondItem="yWY-bA-dgw" secondAttribute="trailing" id="mNn-XS-W1S"/>
+                            <constraint firstItem="XEj-ZD-efh" firstAttribute="centerX" secondItem="pqe-wT-R51" secondAttribute="centerX" id="oVI-Fe-8fc"/>
                             <constraint firstItem="C8P-DY-Hl5" firstAttribute="leading" secondItem="yWY-bA-dgw" secondAttribute="leading" id="sWZ-dl-jmU"/>
+                            <constraint firstItem="aSL-73-tyZ" firstAttribute="top" secondItem="yWY-bA-dgw" secondAttribute="top" id="uC2-L5-M7I"/>
                             <constraint firstItem="7xx-mZ-KTB" firstAttribute="leading" secondItem="pqe-wT-R51" secondAttribute="leading" id="vc1-5l-vmR"/>
+                            <constraint firstItem="XEj-ZD-efh" firstAttribute="bottom" secondItem="FUC-SO-47T" secondAttribute="bottom" id="zFZ-VN-Mr3"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Météo" image="cloud.sun.rain.fill" catalog="system" id="Y5l-1g-sY3"/>
                     <connections>
+                        <outlet property="departureActivityIndicator" destination="aSL-73-tyZ" id="LFM-YX-Fru"/>
                         <outlet property="departureCityNameLabel" destination="vwt-gz-PCK" id="xGp-MQ-I4D"/>
                         <outlet property="departureCityTemperatureLabel" destination="eMu-rM-SZD" id="8DV-xY-PP9"/>
                         <outlet property="departureCityWeatherDescription" destination="DR0-kP-YxS" id="A68-A1-dwC"/>
                         <outlet property="departureCityWeatherPicture" destination="C8P-DY-Hl5" id="pJg-wS-ftv"/>
+                        <outlet property="departureStackView" destination="yWY-bA-dgw" id="Pgr-Ps-YZF"/>
+                        <outlet property="destinationActivityIndicator" destination="XEj-ZD-efh" id="Yab-Hq-6uc"/>
                         <outlet property="destinationCityNameLabel" destination="ovC-O7-hco" id="6JS-oP-vcy"/>
                         <outlet property="destinationCityTemperatureLabel" destination="fXe-R9-iFG" id="hql-z9-Dnm"/>
                         <outlet property="destinationCityWeatherDescription" destination="5N2-Ko-bg7" id="nky-4Y-Omy"/>
                         <outlet property="destinationCityWeatherPicture" destination="FUC-SO-47T" id="i9o-cS-mJe"/>
+                        <outlet property="destinationStackView" destination="p2p-vW-bnx" id="ekc-D9-8FK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oNZ-G1-CfI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

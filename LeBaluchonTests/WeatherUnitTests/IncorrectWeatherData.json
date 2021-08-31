@@ -5,10 +5,7 @@
     },
     "weather": [
         {
-            "id": 800,
-            "main": "Clear",
-            "description":,
-            "icon":
+           
         }
     ],
     "base": "stations",
