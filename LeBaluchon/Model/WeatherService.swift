@@ -107,8 +107,3 @@ class WeatherService {
         task.resume()
     }
 }
-
-extension StringProtocol {
-    /// This parameter modifies the initial variable by uppercasing the first letter of its.
-    var firstUppercased: String { prefix(1).uppercased() + dropFirst() }
-}

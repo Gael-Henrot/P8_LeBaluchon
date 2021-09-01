@@ -21,6 +21,7 @@
 		7CA659A626A9A26400432F93 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA659A526A9A26400432F93 /* APIKeys.swift */; };
 		7CD22DD726B426FE002D2AC2 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD22DD626B426FE002D2AC2 /* Translation.swift */; };
 		7CEFDD2626DE52CC0037BB7A /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEFDD2526DE52CC0037BB7A /* UIViewExtensions.swift */; };
+		7CEFDD2826DF4CCF0037BB7A /* StringProtocolExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEFDD2726DF4CCF0037BB7A /* StringProtocolExtensions.swift */; };
 		7CF6DD1426A570440079C41A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF6DD1326A570440079C41A /* AppDelegate.swift */; };
 		7CF6DD1626A570440079C41A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF6DD1526A570440079C41A /* SceneDelegate.swift */; };
 		7CF6DD1B26A570440079C41A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF6DD1926A570440079C41A /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 		7CA659A526A9A26400432F93 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		7CD22DD626B426FE002D2AC2 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		7CEFDD2526DE52CC0037BB7A /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		7CEFDD2726DF4CCF0037BB7A /* StringProtocolExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProtocolExtensions.swift; sourceTree = "<group>"; };
 		7CF6DD1026A570440079C41A /* LeBaluchon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeBaluchon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF6DD1326A570440079C41A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CF6DD1526A570440079C41A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				7CEFDD2526DE52CC0037BB7A /* UIViewExtensions.swift */,
+				7CEFDD2726DF4CCF0037BB7A /* StringProtocolExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				7CF6DD4D26A84D8D0079C41A /* WeatherService.swift in Sources */,
 				7CF6DD2F26A589B50079C41A /* CurrencyService.swift in Sources */,
 				7CF6DD4B26A82C320079C41A /* TranslationViewController.swift in Sources */,
+				7CEFDD2826DF4CCF0037BB7A /* StringProtocolExtensions.swift in Sources */,
 				7CF6DD4926A82BF50079C41A /* WeatherViewController.swift in Sources */,
 				7CF6DD4F26A8714F0079C41A /* Weather.swift in Sources */,
 				7CD22DD726B426FE002D2AC2 /* Translation.swift in Sources */,
