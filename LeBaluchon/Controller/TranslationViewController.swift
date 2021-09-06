@@ -35,7 +35,7 @@ class TranslationViewController: UIViewController {
     private func getTranslation() {
         translationService.getTranslation(textToTranslate: sourceLanguageTextView.text, callback: { (success, translationData) in
             guard success else {
-                self.presentAlert()
+                AlertController.presentErrorAlert(message: "The translation download failed.")
                 return
             }
             self.targetLanguageTextView.text = translationData?.translatedText
@@ -52,13 +52,6 @@ class TranslationViewController: UIViewController {
     /// This method swap the value (String) of two variables.
     private func swap( _ a: inout String, _ b: inout String) {
         (a, b) = (b, a)
-    }
-    
-    /// This method presents a standard Alert Controller to warn the user when a problem occurrs during the translation update.
-    private func presentAlert() {
-        let alertVC = UIAlertController(title: "Error", message: "The translation download failed.", preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        present(alertVC, animated: true, completion: nil)
     }
     
     /// This method hides the keyboard if the user touch outside the keyboard.

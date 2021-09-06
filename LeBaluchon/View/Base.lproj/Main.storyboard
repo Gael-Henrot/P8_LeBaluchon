@@ -181,25 +181,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yWY-bA-dgw" userLabel="Departure city Stack View">
-                                <rect key="frame" x="30" y="392.66666666666669" width="354" height="100"/>
+                                <rect key="frame" x="30" y="393" width="354" height="98"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure city name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwt-gz-PCK" userLabel="Departure City Name Label">
-                                        <rect key="frame" x="86.666666666666686" y="0.0" width="181" height="23.333333333333332"/>
+                                        <rect key="frame" x="84.666666666666671" y="0.0" width="184.66666666666663" height="22.666666666666668"/>
                                         <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yNr-rc-M2c">
-                                        <rect key="frame" x="70.333333333333329" y="38.333333333333314" width="213.33333333333337" height="23.333333333333329"/>
+                                        <rect key="frame" x="73.666666666666671" y="37.666666666666686" width="206.66666666666663" height="22.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure city temp." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMu-rM-SZD" userLabel="Departure City Temperature Label">
-                                                <rect key="frame" x="0.0" y="0.0" width="182.66666666666666" height="23.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="180.33333333333334" height="22.666666666666668"/>
                                                 <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVj-Jo-uPV">
-                                                <rect key="frame" x="190.66666666666669" y="0.0" width="22.666666666666657" height="23.333333333333332"/>
+                                                <rect key="frame" x="188.33333333333331" y="0.0" width="18.333333333333343" height="22.666666666666668"/>
                                                 <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -207,7 +207,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure city description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DR0-kP-YxS" userLabel="Departure City Description Label">
-                                        <rect key="frame" x="61.666666666666686" y="76.666666666666629" width="231" height="23.333333333333329"/>
+                                        <rect key="frame" x="55.333333333333329" y="75.333333333333314" width="243.66666666666669" height="22.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -216,25 +216,25 @@
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="p2p-vW-bnx" userLabel="Destination City Stack View">
-                                <rect key="frame" x="30" y="15" width="354" height="100"/>
+                                <rect key="frame" x="30" y="15" width="354" height="98"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination city name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovC-O7-hco" userLabel="Destination City Name Label">
-                                        <rect key="frame" x="80.333333333333329" y="0.0" width="193.33333333333337" height="23.333333333333332"/>
+                                        <rect key="frame" x="75.333333333333329" y="0.0" width="203.33333333333337" height="22.666666666666668"/>
                                         <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dCR-uO-0RY">
-                                        <rect key="frame" x="64.333333333333329" y="38.333333333333336" width="225.66666666666669" height="23.333333333333336"/>
+                                        <rect key="frame" x="64.333333333333329" y="37.666666666666664" width="225.33333333333337" height="22.666666666666664"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination city temp." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXe-R9-iFG" userLabel="Destination City Temperature Label">
-                                                <rect key="frame" x="0.0" y="0.0" width="195" height="23.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="199" height="22.666666666666668"/>
                                                 <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DY4-zA-vqk">
-                                                <rect key="frame" x="203" y="0.0" width="22.666666666666657" height="23.333333333333332"/>
+                                                <rect key="frame" x="207" y="0.0" width="18.333333333333343" height="22.666666666666668"/>
                                                 <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -242,7 +242,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination city description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5N2-Ko-bg7" userLabel="Destination City Description Label">
-                                        <rect key="frame" x="55.666666666666686" y="76.666666666666671" width="243" height="23.333333333333329"/>
+                                        <rect key="frame" x="46" y="75.333333333333329" width="262.33333333333331" height="22.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -251,15 +251,15 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C8P-DY-Hl5" userLabel="Departure City Weather Picture">
-                                <rect key="frame" x="30" y="492.66666666666669" width="354" height="184.33333333333331"/>
+                                <rect key="frame" x="30" y="491" width="354" height="186"/>
                                 <color key="backgroundColor" white="1" alpha="0.49883588576158938" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FUC-SO-47T" userLabel="Destination City Weather Picture">
-                                <rect key="frame" x="30" y="115.00000000000001" width="354" height="184.33333333333337"/>
+                                <rect key="frame" x="30" y="113" width="354" height="186"/>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cW-Vv-oxV">
-                                <rect key="frame" x="70" y="304.33333333333331" width="274" height="83.333333333333314"/>
+                                <rect key="frame" x="70" y="304" width="274" height="84"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Umbrage" family="Umbrage" pointSize="25"/>
                                 <size key="titleShadowOffset" width="0.0" height="-4"/>
@@ -278,10 +278,10 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="XEj-ZD-efh">
-                                <rect key="frame" x="188.66666666666666" y="15" width="37" height="284.33333333333331"/>
+                                <rect key="frame" x="188.66666666666666" y="15" width="37" height="284"/>
                             </activityIndicatorView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="aSL-73-tyZ">
-                                <rect key="frame" x="188.66666666666666" y="392.66666666666674" width="37" height="284.33333333333326"/>
+                                <rect key="frame" x="188.66666666666666" y="393" width="37" height="284"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="srE-HU-tw2"/>
@@ -393,7 +393,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Text to traduce" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Qx-4O-NGj" userLabel="Target Language Text View">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Text to translate" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Qx-4O-NGj" userLabel="Target Language Text View">
                                         <rect key="frame" x="0.0" y="38.000000000000014" width="374" height="245.33333333333337"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <color key="textColor" systemColor="labelColor"/>

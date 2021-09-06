@@ -14,6 +14,7 @@
 		7C39185526AAC8A700A23888 /* WeatherServiceTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39185426AAC8A700A23888 /* WeatherServiceTestCases.swift */; };
 		7C39185726AED97F00A23888 /* IncorrectWeatherData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C39185626AED97F00A23888 /* IncorrectWeatherData.json */; };
 		7C39185926AF2C3E00A23888 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39185826AF2C3E00A23888 /* TranslationService.swift */; };
+		7C80A05226E61E01007D4D25 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C80A05126E61E01007D4D25 /* AlertController.swift */; };
 		7C97057C26D62B2E00D5EC3F /* TranslationData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C97057B26D62B2E00D5EC3F /* TranslationData.json */; };
 		7C97057E26D62CC200D5EC3F /* TranslationServiceTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C97057D26D62CC200D5EC3F /* TranslationServiceTestCases.swift */; };
 		7C97058026D62D1B00D5EC3F /* FakeTranslationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C97057F26D62D1B00D5EC3F /* FakeTranslationData.swift */; };
@@ -58,6 +59,7 @@
 		7C39185426AAC8A700A23888 /* WeatherServiceTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceTestCases.swift; sourceTree = "<group>"; };
 		7C39185626AED97F00A23888 /* IncorrectWeatherData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IncorrectWeatherData.json; sourceTree = "<group>"; };
 		7C39185826AF2C3E00A23888 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
+		7C80A05126E61E01007D4D25 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		7C97057B26D62B2E00D5EC3F /* TranslationData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TranslationData.json; sourceTree = "<group>"; };
 		7C97057D26D62CC200D5EC3F /* TranslationServiceTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationServiceTestCases.swift; sourceTree = "<group>"; };
 		7C97057F26D62D1B00D5EC3F /* FakeTranslationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTranslationData.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				7CF6DD4A26A82C320079C41A /* TranslationViewController.swift */,
 				7CF6DD4826A82BF50079C41A /* WeatherViewController.swift */,
 				7C39184726A9CA8F00A23888 /* BaseTabBarController.swift */,
+				7C80A05126E61E01007D4D25 /* AlertController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				7CEFDD2626DE52CC0037BB7A /* UIViewExtensions.swift in Sources */,
 				7CA659A626A9A26400432F93 /* APIKeys.swift in Sources */,
 				7CF6DD1426A570440079C41A /* AppDelegate.swift in Sources */,
+				7C80A05226E61E01007D4D25 /* AlertController.swift in Sources */,
 				7CF6DD2B26A574C90079C41A /* CurrencyViewController.swift in Sources */,
 				7CF6DD1626A570440079C41A /* SceneDelegate.swift in Sources */,
 				7C39185926AF2C3E00A23888 /* TranslationService.swift in Sources */,

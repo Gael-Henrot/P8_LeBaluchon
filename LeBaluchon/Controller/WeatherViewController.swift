@@ -43,7 +43,7 @@ class WeatherViewController: UIViewController {
         
         weatherService.getDepartureWeather(callback: { (success, weatherData) in
             guard success else {
-                self.presentAlert()
+                AlertController.presentErrorAlert(message: "The weather download failed.")
                 return
             }
             if let weatherData = weatherData {
@@ -53,13 +53,13 @@ class WeatherViewController: UIViewController {
                 self.departureCityWeatherPicture.image = UIImage(data: weatherData.picture)
                 self.toggleActivityIndicator(location: .departure, show: false)
             } else {
-                self.presentAlert()
+                AlertController.presentErrorAlert(message: "The weather download failed.")
             }
         })
         
         weatherService.getDestinationWeather(callback: { (success, weatherData) in
             guard success else {
-                self.presentAlert()
+                AlertController.presentErrorAlert(message: "The weather download failed.")
                 return
             }
             if let weatherData = weatherData {
@@ -69,16 +69,9 @@ class WeatherViewController: UIViewController {
                 self.destinationCityWeatherPicture.image = UIImage(data: weatherData.picture)
                 self.toggleActivityIndicator(location: .destination, show: false)
             } else {
-                self.presentAlert()
+                AlertController.presentErrorAlert(message: "The weather download failed.")
             }
         })
-    }
-    
-    /// This method presents a standard Alert Controller to warn the user when a problem occurrs during the weather update.
-    private func presentAlert() {
-        let alertVC = UIAlertController(title: "Error", message: "The weather download failed.", preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        present(alertVC, animated: true, completion: nil)
     }
     
     private enum Location {

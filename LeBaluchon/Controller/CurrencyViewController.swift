@@ -30,14 +30,14 @@ class CurrencyViewController: UIViewController {
         
         currencyService.getCurrencyRate { (success, currencyData) in
             guard success else {
-                self.presentAlert()
+                AlertController.presentErrorAlert(message: "The currency rate download failed.")
                 return
             }
             if let currencyData = currencyData {
                 self.rateLabel.text = "\(currencyData.rate)"
                 self.rate = currencyData.rate
             } else {
-                self.presentAlert()
+                AlertController.presentErrorAlert(message: "The currency rate download failed.")
                 self.rateLabel.text = "0"
             }
             
@@ -53,13 +53,6 @@ class CurrencyViewController: UIViewController {
             return
         }
         targetCurrencyTextField.text = "\(round(100*(baseCurrencyAmount * rate))/100)"
-    }
-    
-    /// This method presents a standard Alert Controller to warn the user when a problem occurrs during the rate update.
-    private func presentAlert() {
-        let alertVC = UIAlertController(title: "Error", message: "The currency rate download failed.", preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        present(alertVC, animated: true, completion: nil)
     }
     
     /// This method hides the keyboard if the user touch outside the keyboard.
