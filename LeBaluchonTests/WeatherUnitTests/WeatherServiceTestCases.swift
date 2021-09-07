@@ -100,6 +100,21 @@ class WeatherServiceTestCases: XCTestCase {
         }
         wait(for: [expectation], timeout: 0.01)
     }
+    
+    func testGetWeatherShouldPostFailedCallbackIfCoorectResponseButEmptyData() {
+        let weatherService = WeatherService(departureSession: URLSessionFake(data: FakeWeatherData.IncorrectWeatherCorrectData, response: FakeWeatherData.responseOK, error: nil),
+                                            departurePictureSession: URLSessionFake(data: FakeWeatherData.pictureData, response: FakeWeatherData.responseKO, error: nil),
+                                            destinationSession: URLSessionFake(data: nil, response: nil, error: nil),
+                                            destinationPictureSession: URLSessionFake(data: nil, response: nil, error: nil))
+        let expectation = XCTestExpectation(description: "Wait for queue change.")
+        weatherService.getDepartureWeather { (success, weatherData) in
+            XCTAssertFalse(success)
+            XCTAssertNil(weatherData)
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 0.01)
+    }
+    
     func testGetDepartureWeatherShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
         let weatherService = WeatherService(departureSession: URLSessionFake(data: FakeWeatherData.weatherCorrectData, response: FakeWeatherData.responseOK, error: nil),
                                             departurePictureSession: URLSessionFake(data: FakeWeatherData.pictureData, response: FakeWeatherData.responseOK, error: nil),

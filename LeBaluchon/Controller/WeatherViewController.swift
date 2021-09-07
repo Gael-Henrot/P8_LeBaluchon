@@ -41,9 +41,10 @@ class WeatherViewController: UIViewController {
         self.toggleActivityIndicator(location: .departure, show: true)
         self.toggleActivityIndicator(location: .destination, show: true)
         
-        weatherService.getDepartureWeather(callback: { (success, weatherData) in
+        weatherService.getDepartureWeather(callback: { [weak self] (success, weatherData) in
+            guard let self = self else { return }
             guard success else {
-                AlertController.presentErrorAlert(message: "The weather download failed.")
+                self.presentErrorAlert(message: "The weather download failed.")
                 return
             }
             if let weatherData = weatherData {
@@ -53,13 +54,14 @@ class WeatherViewController: UIViewController {
                 self.departureCityWeatherPicture.image = UIImage(data: weatherData.picture)
                 self.toggleActivityIndicator(location: .departure, show: false)
             } else {
-                AlertController.presentErrorAlert(message: "The weather download failed.")
+                self.presentErrorAlert(message: "The weather download failed.")
             }
         })
         
-        weatherService.getDestinationWeather(callback: { (success, weatherData) in
+        weatherService.getDestinationWeather(callback: { [weak self] (success, weatherData) in
+            guard let self = self else { return }
             guard success else {
-                AlertController.presentErrorAlert(message: "The weather download failed.")
+                self.presentErrorAlert(message: "The weather download failed.")
                 return
             }
             if let weatherData = weatherData {
@@ -69,7 +71,7 @@ class WeatherViewController: UIViewController {
                 self.destinationCityWeatherPicture.image = UIImage(data: weatherData.picture)
                 self.toggleActivityIndicator(location: .destination, show: false)
             } else {
-                AlertController.presentErrorAlert(message: "The weather download failed.")
+                self.presentErrorAlert(message: "The weather download failed.")
             }
         })
     }
