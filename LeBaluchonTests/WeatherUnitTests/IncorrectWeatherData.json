@@ -4,9 +4,7 @@
         "lat": 40.7143
     },
     "weather": [
-        {
-           
-        }
+        
     ],
     "base": "stations",
     "main": {

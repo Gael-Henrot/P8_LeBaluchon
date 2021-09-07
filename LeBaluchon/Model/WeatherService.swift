@@ -71,8 +71,9 @@ class WeatherService {
                 }
                 
                 let name = responseJSON.name
-                let description = responseJSON.weather.first!.description.firstUppercased
-                let icon = responseJSON.weather.first!.icon
+                guard let description = responseJSON.weather.first?.description.firstUppercased, let icon = responseJSON.weather.first?.icon else {
+                    return callback(false, nil)
+                }
                 
                 let temperature = round(responseJSON.main.temp * 10) / 10
                 self.getPicture(session: pictureSession, iconId: icon) { data in

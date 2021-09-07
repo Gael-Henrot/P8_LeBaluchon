@@ -28,16 +28,17 @@ class CurrencyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        currencyService.getCurrencyRate { (success, currencyData) in
+        currencyService.getCurrencyRate { [weak self] (success, currencyData) in
+            guard let self = self else { return }
             guard success else {
-                AlertController.presentErrorAlert(message: "The currency rate download failed.")
+                self.presentErrorAlert(message: "The currency rate download failed.")
                 return
             }
             if let currencyData = currencyData {
                 self.rateLabel.text = "\(currencyData.rate)"
                 self.rate = currencyData.rate
             } else {
-                AlertController.presentErrorAlert(message: "The currency rate download failed.")
+                self.presentErrorAlert(message: "The currency rate download failed.")
                 self.rateLabel.text = "0"
             }
             

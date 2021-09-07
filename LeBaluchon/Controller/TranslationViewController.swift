@@ -33,9 +33,10 @@ class TranslationViewController: UIViewController {
     
     /// This method call the model getTranslation method and display the result.
     private func getTranslation() {
-        translationService.getTranslation(textToTranslate: sourceLanguageTextView.text, callback: { (success, translationData) in
+        translationService.getTranslation(textToTranslate: sourceLanguageTextView.text, callback: { [weak self] (success, translationData) in
+            guard let self = self else { return }
             guard success else {
-                AlertController.presentErrorAlert(message: "The translation download failed.")
+                self.presentErrorAlert(message: "The translation download failed.")
                 return
             }
             self.targetLanguageTextView.text = translationData?.translatedText
