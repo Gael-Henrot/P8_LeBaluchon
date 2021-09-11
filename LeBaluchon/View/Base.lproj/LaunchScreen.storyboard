@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeBaluchon - Launchscreen-1" translatesAutoresizingMaskIntoConstraints="NO" id="8Nz-vY-MtH">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeBaluchon - Launchscreen" translatesAutoresizingMaskIntoConstraints="NO" id="8Nz-vY-MtH">
                                 <rect key="frame" x="20" y="64" width="374" height="778"/>
                             </imageView>
                         </subviews>
@@ -36,6 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LeBaluchon - Launchscreen-1" width="1009" height="1294"/>
+        <image name="LeBaluchon - Launchscreen" width="1009" height="1294"/>
     </resources>
 </document>
