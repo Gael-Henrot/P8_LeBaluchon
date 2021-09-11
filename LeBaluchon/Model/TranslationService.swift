@@ -59,7 +59,7 @@ class TranslationService {
                     callback(false, nil)
                     return
                 }
-                let translation = TranslationData(translatedText: responseJSON.data.translations[0].translatedText)
+                let translation = TranslationData(translatedText: responseJSON.data.translations[0].translatedText.removingPercentEncoding!)
                 callback(true, translation)
                 
             }
