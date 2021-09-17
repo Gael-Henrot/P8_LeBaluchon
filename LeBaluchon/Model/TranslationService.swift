@@ -59,7 +59,9 @@ class TranslationService {
                     callback(false, nil)
                     return
                 }
-                let translation = TranslationData(translatedText: responseJSON.data.translations[0].translatedText.removingPercentEncoding!)
+                let translatedText = responseJSON.data.translations[0].translatedText
+                let attrString = try! NSAttributedString(data: translatedText.data(using: .utf8)!, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil)
+                let translation = TranslationData(translatedText: attrString.string)
                 callback(true, translation)
                 
             }
